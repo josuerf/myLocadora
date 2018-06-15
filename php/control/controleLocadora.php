@@ -42,8 +42,6 @@ if ($opcao === 'Logar') {
     $email = $SecurePOST["email"];
     $tipo = $SecurePOST["tipoUsuario"];
     cadastrarUsuario($nome, $senha, $email, $tipo);
-    echo "<script>alert('Sucesso! Usuário Cadastrado.');</script>";
-    echo "<script>window.location = '../../index.php';</script>";
 } elseif ($opcao === 'CadastrarFilme') {
     if (!$session) {
         session_start();
@@ -55,8 +53,6 @@ if ($opcao === 'Logar') {
         $preco = str_replace(",", ".", substr($SecurePOST["preco"], 3));
         $duracao = $SecurePOST["duracao"];
         cadastrarFilme($nome, $genero, $preco, $duracao);
-        echo "<script>alert('Sucesso! Filme Cadastrado.');</script>";
-        echo "<script>window.location = '../view/cadastrar_filme.php';</script>";
     } else {
         echo "<script>alert('Você Não Tem Permissão Necessária Para Isso!');</script>";
         echo "<script>window.location = '../view/principal_cliente.php';</script>";
@@ -68,8 +64,6 @@ if ($opcao === 'Logar') {
     $duracao = $SecurePOST["duracao"];
 	$idFilme = $SecurePOST["id_filme"];
     atualizaFilme($idFilme,$nome, $genero, $preco, $duracao);
-    echo "<script>alert('Sucesso! Filme Atualizado.');</script>";
-    echo "<script>window.location = '../view/principal_func.php';</script>";
 }
 
 //GET
@@ -80,8 +74,6 @@ if ($SecureGET["opcao"] === "ExcluirFilme") {
     }
     if ($_SESSION["tipo_usuario"] === 'funcionario') {
         excluirFilme($SecureGET["id_filme"]);
-        echo "<script>alert('Sucesso! Filme Excluído.');</script>";
-        echo "<script>window.location = '../view/principal_func.php';</script>";
     } else {
         echo "<script>alert('Você Não Tem Permissão Necessária Para Isso!');</script>";
         echo "<script>window.location = '../view/principal_cliente.php';</script>";

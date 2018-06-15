@@ -87,13 +87,15 @@
                             <div class="form-group">
                                 <label for="duracao">Duração</label>
                                 <input type="text" class="form-control duracao" id="duracao" placeholder="00:00h" required name="duracao"> </div>
-                            <button type="submit" name="opcao" value="CadastrarFilme" class="btn btn-success">
+                            <button type="submit" name="opcao" value="CadastrarFilme" class="btn btn-success" data-txtBody="Filme Cadastrador com Sucesso!" 
+                                    data-txtTitle="Filme Cadastrado" data-toggle="modal" data-target="#modalSuccess" data-url="../view/principal_func.php">
                                 <i class="fa d-inline fa-lg fa-envelope"></i> Cadastrar
                                 <br> </button>
                         </form>
                     </div>
                 </div>
             </div>
+            <?php include_once "../util/modalSuccess.php"; ?>
         </div>
         <script src="../../js/jquery-3.3.1.min.js"></script>
         <script src="../../js/popper.min.js"></script>

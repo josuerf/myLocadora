@@ -12,7 +12,9 @@
             </div>
             <div class = "modal-footer">
                 <button type = "button" class = "btn btn-info" data-dismiss = "modal">Cancelar</button>
-                <a id="confirmarExclusao" href = "#" class = "btn btn-danger">Excluir</a>
+                <a id="confirmarExclusao" href = "#" class = "btn btn-danger" 
+                   data-txtBody="Filme Excluído com Sucesso!" data-txtTitle="Filme Excluído" data-toggle="modal"
+                    data-target="#modalSuccess" data-url="../view/principal_func.php">Excluir</a>
             </div>
         </div>
     </div>

@@ -102,7 +102,6 @@
                                                 '&', 'duracao=', $data['duracao'];
                                                 ?>" class="btn btn-sm btn-warning">
                                                     <i class="fa fa-pencil"></i> Editar</a>
-
                                                     <button type="button" class="btn btn-sm btn-danger" data-name='<?php echo $data['nome']; ?>' data-id='<?php echo $data['id']; ?>' data-toggle="modal" data-target="#exampleModalCenter">
                                                     <i class="fa fa-trash"></i> Excluir
                                                 </button>

@@ -63,7 +63,9 @@
                                     <option value="funcionario">Funcionario</option>
                                 </select>
                             </div>
-                            <button type="button" onclick="validarForm()"  class="btn btn-success">
+                            <button type="button" onclick="validarForm()"  class="btn btn-success" 
+                                data-txtBody="Usuário Cadastrado com Sucesso!" data-txtTitle="Cadastro Usuario" data-toggle="modal"
+                                data-target="#modalSuccess" data-url="../../index.php">
                                 <i class="fa fa-lg fa-envelope d-inline-block"></i> Enviar
                                 <br> </button>
                         </form>
@@ -71,6 +73,7 @@
                 </div>
             </div>
         </div>
+        <?php include_once '../util/modalSuccess.php'; ?>
         <script src="../../js/jquery-3.3.1.min.js"></script>
         <script src="../../js/popper.min.js"></script>
         <script src="../../js/bootstrap.min.js"></script>

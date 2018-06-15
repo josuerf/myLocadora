@@ -91,7 +91,8 @@
                             <div class="form-group">
                                 <label for="duracao">Duração</label>
                                 <input type="text" name="duracao" value="<?php echo $get['duracao']; ?>" class="form-control duracao" id="duracao" placeholder="00:00h" required > </div>
-                            <button type="submit" name="opcao" value="AtualizarFilme" class="btn btn-success">
+                            <button type="submit" name="opcao" value="AtualizarFilme" class="btn btn-success" data-txtBody="Filme Atualizado com Sucesso!"
+                                    data-txtTitle="Atualizar Filme" data-toggle="modal" data-target="#modalSuccess" data-url="../view/principal_func.php">
                                 <i class="fa d-inline fa-lg fa-save"></i>&nbsp;Salvar </button>
                             <a class="btn btn-danger text-light" href="principal_func.php">
                                 <i class="fa d-inline fa-lg fa-close"></i>&nbsp;Cancelar </a>
@@ -100,6 +101,7 @@
                 </div>
             </div>
         </div>
+        <?php include_once '../util/modalSuccess.php'; ?>
         <script src="../../js/jquery-3.3.1.min.js"></script>
         <script src="../../js/popper.min.js"></script>
         <script src="../../js/bootstrap.min.js"></script>
