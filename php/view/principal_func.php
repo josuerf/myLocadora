@@ -59,7 +59,7 @@
         <div class="py-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12 bg-gradient">
+                    <div class="col-md-12 bg-gradient rounded">
                         <h1 class="">
                             <b>Filmes Cadastrados</b>
                         </h1>
@@ -108,7 +108,7 @@
                                             </td>     
                                         </tr> <?php endforeach; ?>  <?php else : ?>
                                     <tr>  
-                                        <td colspan="6">Nenhum registro encontrado.</td>
+                                        <td colspan="5">Nenhum registro encontrado.</td>
                                     </tr> <?php endif; ?> 
                             </tbody>
                         </table>
