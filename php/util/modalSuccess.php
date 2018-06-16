@@ -7,7 +7,7 @@
             <div class = "modal-body text-left">
             </div>
             <div class = "modal-footer">
-                <a href="#" id="confirmModal" class = "btn btn-info">OK</a>
+                <a href="#" id="confirmModal" class = "btn btn-info" data-dismiss="">OK</a>
             </div>
         </div>
     </div>
