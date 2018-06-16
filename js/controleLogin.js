@@ -20,14 +20,14 @@ function do_login() {
                     $("#modalSuccess").modal('show');
                     $("#modalSuccess").find('.modal-body').text("Erro! Usuário ou Senha Inválidos.");
                     $("#modalSuccess").find('#modalSuccessTitle').text("Erro de Login");
-                    $("#modalSuccess").find('#confirmModal').attr('href', "index.php");
+                    $("#modalSuccess").find('#confirmModal').attr('data-dismiss', "modal");
                 }
             })
             .fail(function (xhr, status, errorThrown) {
                 $("#modalSuccess").modal('show');
                 $("#modalSuccess").find('.modal-body').text("Erro! Código: " + status + "\nMensagem: " + errorThrown);
                 $("#modalSuccess").find('#modalSuccessTitle').text("Erro de Login");
-                $("#modalSuccess").find('#confirmModal').attr('href', "index.php");
+                $("#modalSuccess").find('#confirmModal').attr('data-dismiss', "modal");
                 console.dir(xhr);
             });
     return false;
