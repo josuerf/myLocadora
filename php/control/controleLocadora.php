@@ -47,6 +47,7 @@ if ($opcao === 'Logar') {
         $preco = str_replace(",", ".", substr($SecurePOST["preco"], 3));
         $duracao = $SecurePOST["duracao"];
         cadastrarFilme($nome, $genero, $preco, $duracao);
+        echo '1';
     } else {
         echo "<script>alert('Você Não Tem Permissão Necessária Para Isso!');</script>";
         echo "<script>window.location = '../view/principal_cliente.php';</script>";
@@ -56,8 +57,9 @@ if ($opcao === 'Logar') {
     $genero = $SecurePOST["genero"];
     $preco = str_replace(",", ".", substr($SecurePOST["preco"], 3));
     $duracao = $SecurePOST["duracao"];
-	$idFilme = $SecurePOST["id_filme"];
+    $idFilme = $SecurePOST["id_filme"];
     atualizaFilme($idFilme,$nome, $genero, $preco, $duracao);
+    echo '1';
 }
 
 //GET
@@ -68,7 +70,6 @@ if ($SecureGET["opcao"] === "ExcluirFilme") {
     }
     if ($_SESSION["tipo_usuario"] === 'funcionario') {
         excluirFilme($SecureGET["id_filme"]);
-        header("Location: ../view/principal_func.php");
     } else {
         echo "<script>alert('Você Não Tem Permissão Necessária Para Isso!');</script>";
         echo "<script>window.location = '../view/principal_cliente.php';</script>";

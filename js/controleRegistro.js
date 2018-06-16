@@ -15,7 +15,22 @@ function validarForm() {
             } else if ($('#emailResult').is(':visible')) {
                 alert("Erro! E-Mail Já Existe.");
             } else {
-                document.formRegistro.submit();
+                $.ajax({
+                    type: "POST",
+                    url: "../control/controleLocadora.php",
+                    data: {
+                        opcao: "Registrar",
+                        nomeUsuarioR: nome,
+                        senha: senha,
+                        email: email,
+                        tipoUsuario: $("#tipoUsuario").val()
+                    }
+                }).done(function () {
+                    $("#modalSuccess").modal('show');
+                    $("#modalSuccess").find('.modal-body').text("Usuário Cadastrado com Sucesso!");
+                    $("#modalSuccess").find('#modalSuccessTitle').text("Cadastro Usuario");
+                    $("#modalSuccess").find('#confirmModal').attr('href', "../../index.php");
+                });
             }
         }
     } else {
