@@ -59,7 +59,7 @@
             <div class="container">
                 <?php $get = filter_input_array(INPUT_GET, FILTER_DEFAULT); ?>
                 <div class="row">
-                    <div class="col-md-12 bg-gradient">
+                    <div class="col-md-12 bg-gradient rounded">
                         <h1 class="">
                             <b>Editando</b>
                         </h1>
@@ -71,7 +71,7 @@
                         <form class="mx-0 px-1" method="POST" action="../control/controleLocadora.php" onsubmit="return do_update();">
 
                             <div class="form-group">
-                                <input type="hidden" name="id_filme" value="<?php
+                                <input type="hidden" name="id_filme" id="id_filme" value="<?php
                                 echo $get['id_filme'];
                                 ?>">
                                 <label for="nomeFilme">Nome</label>
@@ -93,7 +93,7 @@
                                 <input type="text" name="duracao" value="<?php echo $get['duracao']; ?>" class="form-control duracao" id="duracao" placeholder="00:00h" required > </div>
                             <button type="submit" name="opcao" value="AtualizarFilme" class="btn btn-success">
                                 <i class="fa d-inline fa-lg fa-save"></i>&nbsp;Salvar </button>
-                            <a class="btn btn-danger text-light" href="principal_func.php">
+                            <a class="btn btn-secondary text-light" href="principal_func.php">
                                 <i class="fa d-inline fa-lg fa-close"></i>&nbsp;Cancelar </a>
                         </form>
                     </div>

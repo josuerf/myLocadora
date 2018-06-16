@@ -60,7 +60,7 @@
         <div class="py-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12 bg-gradient">
+                    <div class="col-md-12 bg-gradient rounded">
                         <h1 class="">
                             <b>Cadastrar Filme</b>
                         </h1>

@@ -7,6 +7,16 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
         <link rel="stylesheet" href="css/theme.css" type="text/css"> 
         <title>FilmeAR</title>
+        <?php
+        session_start();
+        if (isset($_SESSION["tipo_usuario"])) {
+            if ($_SESSION["tipo_usuario"] === 'funcionario') {
+                header("Location: php/view/principal_func.php");
+            }else{
+                header("Location: php/view/principal_cliente.php");
+            }
+        }
+        ?>
     </head>
 
     <body class="bg-light">

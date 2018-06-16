@@ -4,7 +4,7 @@ function validarForm() {
     email = document.getElementById('emailR').value;
     senha = document.getElementById('senha').value;
     re_senha = document.getElementById('re_senha').value;
-    if (nome.length > 3 && senha.length > 3 && email.length > 3) {
+    if (nome.length > 3 && senha.length > 3) {
         if (senha !== re_senha) {
             alert("As Senhas Não Coincidem!\nFavor, Tente Novamente.");
         } else {
@@ -37,3 +37,17 @@ function validarForm() {
         alert("Os campos deve ter pelo menos 4 caracteres!");
     }
 }
+
+$('#emailR').focusout(function () {
+   var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+   var email = $("#emailR").val();
+   if (!filter.test(email) && email !== '') {
+        $('#emailR').addClass('alert-danger');
+        $('#emailInvalid').show().fadeOut(4000);
+    } else {
+        if ($('#emailR').hasClass('alert-danger')) {
+            $('#emailR').removeClass('alert-danger');
+        }
+        $('#emailInvalid').hide();
+    }
+});

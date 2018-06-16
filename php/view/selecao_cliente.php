@@ -14,7 +14,7 @@
             header("Location: ../../index.php");
         }
         ?>
-    <title>FilmeAR</title></head>
+        <title>FilmeAR</title></head>
 
 
     <body class="bg-light">
@@ -59,7 +59,7 @@
         <div class="py-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12 bg-gradient">
+                    <div class="col-md-12 bg-gradient rounded">
                         <h1 class="">
                             <b>Seu Carrinho</b>
                         </h1>
@@ -78,10 +78,12 @@
                                 </tr>
                             </thead>
                             <tbody>
+
                                 <?php
                                 include '../control/controleLocadora.php';
                                 $datar = mostrarFilmesSelecionado($_SESSION["id_usuario"]);
                                 $vlTotal = 0;
+
                                 if ($datar) :
                                     ?>
                                     <?php foreach ($datar as $data) : ?>
@@ -102,13 +104,13 @@
                                             </td>     
                                         </tr> <?php endforeach; ?>  <?php else : ?>
                                     <tr>  
-                                        <td colspan="6">Nenhum registro encontrado.</td>
+                                        <td colspan="5">Nenhum registro encontrado.</td>
                                     </tr> <?php endif; ?> 
                             </tbody>
                         </table>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row" id="precoTotal">
                     <div class="text-right col-md-1">
                         <h4 class="display-5 text-right">
                             <b>Total:&nbsp;</b>

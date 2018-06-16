@@ -1,16 +1,16 @@
 function do_update(){
+    var id = $("#id_filme").val();
     $.ajax({
         type: "POST",
         url: "../control/controleLocadora.php",
         data: {
             opcao: "AtualizarFilme",
-            id_filme: $("#id_filme").val(),
+            id_filme: id,
             nomeFilme: $("#nomeFilme").val(),
             genero: $("#genero").val(),
             preco: $("#preco").val(),
             duracao: $("#duracao").val()
         },
-        dataType: "text"
     }).done(function (result) {
         if (result === '1') {
             $("#modalSuccess").modal('show');
