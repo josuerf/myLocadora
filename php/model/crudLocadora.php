@@ -15,7 +15,8 @@ function autentica($usuario, $senha) {
 
 function cadastrarUsuario($nome, $senha, $email, $tipo) {
     conectar();
-    query("insert into usuario (nome,email,tipo_usuario,senha) values ('$nome','$email','$tipo',unhex(sha1('$senha')))");
+    $encryptd = sha1($senha);
+    query("insert into usuario (nome,email,tipo_usuario,senha) values ('$nome','$email','$tipo',unhex('$encryptd'))");
     fechar();
 }
 
@@ -60,7 +61,7 @@ function excluirFilme($idFilme) {
 
 function atualizaFilme($idFilme, $nome, $genero, $preco, $duracao) {
     conectar();
-    $res = query("update filme set nome = '$nome',genero = '$genero', preco = $preco, duracao = '$duracao' where id = $idFilme");
+    query("update filme set nome = '$nome',genero = '$genero', preco = $preco, duracao = '$duracao' where id = $idFilme");
     fechar();
 }
 
@@ -99,3 +100,4 @@ function buscaNomeUsuario($nome,$email){
     fechar();
     return $dataArray;
 }
+?>

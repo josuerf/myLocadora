@@ -108,3 +108,4 @@ function mostrarFilmesNSelecionado($idUsuario) {
     $data = mostrarFilmesNSelecionados($idUsuario);
     return $data;
 }
+?>
