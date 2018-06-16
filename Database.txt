@@ -7,7 +7,7 @@ nome varchar(30) not null unique,
 senha binary(20) not null,
 email varchar(50) not null unique,
 
-tipo_usuario enum('cliente','funcionario') not null
+tipo_usuario varchar(11) not null
 
 );
 

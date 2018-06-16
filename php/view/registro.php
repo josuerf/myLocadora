@@ -61,7 +61,7 @@
                                     <br> </label>
                                 <select class="custom-control custom-select" id="tipoUsuario" name="tipoUsuario">
                                     <option value="cliente">Cliente</option>
-                                    <option value="funcionario">Funcionario</option>
+                                    <option value="funcionario">Funcionário</option>
                                 </select>
                             </div>
                             <button type="button" onclick="validarForm()"  class="btn btn-success">
