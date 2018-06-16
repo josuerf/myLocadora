@@ -7,9 +7,9 @@
             <div class = "modal-body text-left">
             </div>
             <div class = "modal-footer">
-                <a type = "button" id="confirmModal" class = "btn btn-info" >OK</a>
+                <a href="#" id="confirmModal" class = "btn btn-info" data-dismiss = "modal">OK</a>
             </div>
         </div>
     </div>
 </div>
-<script src="../../js/controleModalSuccess.js" type="text/javascript"></script>
+<script src="../../js/modalSuccessDataBinder.js" type="text/javascript"></script>

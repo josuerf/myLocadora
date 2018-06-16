@@ -5,7 +5,7 @@ $(function () {
             var dados = {
                 palavra: pesquisa
             };
-            $.post('/locadora/php/control/buscaUserName.php', dados, function (retorna) {
+            $.post('/mylocadora/php/control/buscaUserName.php', dados, function (retorna) {
                 if (retorna === '1') {
                     $('#nomeUsuarioR').addClass('alert-danger');
                     $('#usuarioResult').show();
@@ -31,7 +31,7 @@ $(function () {
             var dados = {
                 palavra: pesquisa
             };
-            $.post('/locadora/php/control/buscaEmail.php', dados, function (retorna) {
+            $.post('/mylocadora/php/control/buscaEmail.php', dados, function (retorna) {
                 if (retorna === '1') {
                     $('#emailR').addClass('alert-danger');
                     $('#emailResult').show();

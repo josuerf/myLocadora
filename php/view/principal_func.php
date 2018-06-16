@@ -117,7 +117,7 @@
             </div>
         </div>
         <?php include_once '../util/modal.php'; ?>
-        <script src="../../js/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <script src="../../js/jquery-3.3.1.js" type="text/javascript"></script>
         <script src="../../js/popper.min.js" type="text/javascript"></script>
         <script src="../../js/bootstrap.min.js" type="text/javascript"></script>
         <script src="../../js/pesquisar.js" type="text/javascript"></script>

@@ -102,11 +102,13 @@
             </div>
         </div>
         <?php include_once '../util/modalSuccess.php'; ?>
-        <script src="../../js/jquery-3.3.1.min.js"></script>
+        
+        <script src="../../js/jquery-3.3.1.js"></script>
         <script src="../../js/popper.min.js"></script>
         <script src="../../js/bootstrap.min.js"></script>
         <script src="../../js/jquery.maskedinputs.js" type="text/javascript"></script>
         <script src="../../js/mascaras.js" type="text/javascript"></script> 
+        
     </body>
 
 </html>

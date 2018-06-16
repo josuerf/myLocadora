@@ -18,23 +18,17 @@ if ($opcao === 'Logar') {
                 $_SESSION["id_usuario"] = $usuarioR['id'];
                 $_SESSION["nome"] = $usuarioR['nome'];
                 $_SESSION["tipo_usuario"] = $usuarioR['tipo_usuario'];
-                header("Location: ../view/principal_cliente.php");
+                echo '1';
             } else if ($usuarioR['tipo_usuario'] === 'funcionario') {
                 session_start();
                 $_SESSION["id_usuario"] = $usuarioR['id'];
                 $_SESSION["nome"] = $usuarioR['nome'];
                 $_SESSION["tipo_usuario"] = $usuarioR['tipo_usuario'];
-                header("Location: ../view/principal_func.php");
+                echo '2';
             }
         }
     } else {
-        ?>
-        <script type="text/javascript">
-            alert("Erro! Nome de Usuário ou Senha, Inválidos.");
-            window.location = '../../index.php';  
-        </script>
-        <?php
-
+        echo '0';
     }
 } elseif ($opcao === 'Registrar') {
     $nome = $SecurePOST["nomeUsuarioR"];
@@ -74,6 +68,7 @@ if ($SecureGET["opcao"] === "ExcluirFilme") {
     }
     if ($_SESSION["tipo_usuario"] === 'funcionario') {
         excluirFilme($SecureGET["id_filme"]);
+        header("Location: ../view/principal_func.php");
     } else {
         echo "<script>alert('Você Não Tem Permissão Necessária Para Isso!');</script>";
         echo "<script>window.location = '../view/principal_cliente.php';</script>";

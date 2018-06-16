@@ -12,11 +12,10 @@
             </div>
             <div class = "modal-footer">
                 <button type = "button" class = "btn btn-info" data-dismiss = "modal">Cancelar</button>
-                <a id="confirmarExclusao" href = "#" class = "btn btn-danger" 
-                   data-txtBody="Filme Excluído com Sucesso!" data-txtTitle="Filme Excluído" data-toggle="modal"
-                    data-target="#modalSuccess" data-url="../view/principal_func.php">Excluir</a>
+                <a id="confirmarExclusao" href = "#" class = "btn btn-danger">Excluir</a>
             </div>
         </div>
     </div>
 </div>
+<?php include_once 'modalSuccess.php'; ?>
 <script src="../../js/controleExcluir.js" type="text/javascript"></script>
