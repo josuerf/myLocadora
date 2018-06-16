@@ -63,9 +63,7 @@
                                     <option value="funcionario">Funcionario</option>
                                 </select>
                             </div>
-                            <button type="button" onclick="validarForm()"  class="btn btn-success" 
-                                data-txtBody="Usuário Cadastrado com Sucesso!" data-txtTitle="Cadastro Usuario" data-toggle="modal"
-                                data-target="#modalSuccess" data-url="../../index.php">
+                            <button type="button" onclick="validarForm()"  class="btn btn-success">
                                 <i class="fa fa-lg fa-envelope d-inline-block"></i> Enviar
                                 <br> </button>
                         </form>
@@ -78,7 +76,7 @@
         <script src="../../js/popper.min.js"></script>
         <script src="../../js/bootstrap.min.js"></script>
         <script src="../../js/controleRegistro.js"></script>
-        <script src="../../js/userNameValidate.js"></script>
+        <script src="../../js/userValidate.js"></script>
     </body>
 
 </html>

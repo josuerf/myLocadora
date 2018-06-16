@@ -68,7 +68,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12 my-1 p-1">
-                        <form class="mx-0 px-1" method="POST" action="../control/controleLocadora.php">
+                        <form class="mx-0 px-1" method="POST" action="../control/controleLocadora.php" onsubmit="return do_mregister();">
                             <div class="form-group">
                                 <label for="nomeFilme">Nome</label>
                                 <input type="text" class="form-control" maxlength="30" placeholder="Digite o Nome do Filme" id="nomeFilme" name="nomeFilme" required="required"> </div>
@@ -87,8 +87,7 @@
                             <div class="form-group">
                                 <label for="duracao">Duração</label>
                                 <input type="text" class="form-control duracao" id="duracao" placeholder="00:00h" required name="duracao"> </div>
-                            <button type="submit" name="opcao" value="CadastrarFilme" class="btn btn-success" data-txtBody="Filme Cadastrador com Sucesso!" 
-                                    data-txtTitle="Filme Cadastrado" data-toggle="modal" data-target="#modalSuccess" data-url="../view/principal_func.php">
+                            <button type="submit" name="opcao" value="CadastrarFilme" class="btn btn-success">
                                 <i class="fa d-inline fa-lg fa-envelope"></i> Cadastrar
                                 <br> </button>
                         </form>
@@ -101,7 +100,8 @@
         <script src="../../js/popper.min.js"></script>
         <script src="../../js/bootstrap.min.js"></script>
         <script src="../../js/jquery.maskedinputs.js" type="text/javascript"></script>
-        <script src="../../js/mascaras.js" type="text/javascript"></script> 
+        <script src="../../js/mascaras.js" type="text/javascript"></script>
+        <script src="../../js/controleCadastroFilme.js" type="text/javascript"></script>
     </body>
 
 </html>

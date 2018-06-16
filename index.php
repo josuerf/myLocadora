@@ -45,9 +45,7 @@
                             <div class="form-group">
                                 <label for="senha">Senha</label>
                                 <input type="password" class="form-control" maxlength="50" required placeholder="Digite a Senha" id="senha" name="senha"> </div>
-                            <button type="submit" name="opcao" id="btnLogar" value="Logar" class="btn btn-primary"
-                                    data-txtBody="Filme Atualizado com Sucesso!"
-                                    data-txtTitle="Atualizar Filme" data-url="../view/principal_func.php">
+                            <button type="submit" name="opcao" id="btnLogar" value="Logar" class="btn btn-primary">
                                 <i class="fa d-inline fa-lg fa-sign-in"></i> Entrar
                                 <br> </button>
                         </form>
