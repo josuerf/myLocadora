@@ -53,7 +53,7 @@
                                 <label for="emailR">E-mail</label>
                                 <input type="email" class="form-control" maxlength="50" placeholder="Digite Seu Email" id="emailR" name="email"> 
                                 <div style="display: none" id="emailResult"><small class="form-text alert-danger text-danger font-weight-bold">E-Mail Já Cadastrado, Tente Outro!.</small></div>
-                                <div style="display: none" id="emailInvalid"><small class="form-text alert-danger text-danger font-weight-bold">Por Favor, Insira um E-Mail Válido!.</small></div>
+                                <div style="display: none" id="emailInvalid"><small class="form-text alert-danger text-danger font-weight-bold">Por Favor, Insira um E-Mail Válido!. Ex: exemplo@exemplo.com</small></div>
                             </div>
 
                             <div class="form-group">

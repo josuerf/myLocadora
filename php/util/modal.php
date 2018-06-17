@@ -11,7 +11,7 @@
             <div class = "modal-body text-left">
             </div>
             <div class = "modal-footer">
-                <button type = "button" class = "btn btn-info" data-dismiss = "modal">Cancelar</button>
+                <button type = "button" class = "btn btn-secondary" data-dismiss = "modal">Cancelar</button>
                 <a id="confirmarExclusao" href = "#" class = "btn btn-danger" data-dismiss="modal">Excluir</a>
             </div>
         </div>
