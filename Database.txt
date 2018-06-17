@@ -7,7 +7,7 @@ nome varchar(30) not null unique,
 senha binary(20) not null,
 email varchar(50) not null unique,
 
-tipo_usuario enum('cliente','funcionario') not null
+tipo_usuario varchar(11) not null
 
 );
 
@@ -26,13 +26,10 @@ duracao varchar(6) not null
 );
 
 create table compra(
-
-id_compra int not null auto_increment primary key,
 id_filme int not null,
-
 id_usuario int not null,
+primary key(id_filme,id_usuario),
 foreign key (id_filme) references filme (id) on delete cascade on update cascade,
-
 foreign key (id_usuario) references usuario (id)
 
 );

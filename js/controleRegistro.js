@@ -5,15 +5,17 @@ function validarForm() {
     senha = document.getElementById('senha').value;
     re_senha = document.getElementById('re_senha').value;
     if (nome.length > 3 && senha.length > 3) {
-        if (senha !== re_senha) {
+        if ($('#emailInvalid').is(':visible')) {
+            alert("E-Mail Inválido! \nPor favor, insira um e-mail válido");
+        } else if (senha !== re_senha) {
             alert("As Senhas Não Coincidem!\nFavor, Tente Novamente.");
         } else {
             if ($('#usuarioResult').is(':visible') && $('#emailResult').is(':visible')) {
-                alert("Erro! Nome de Usuário e E-mail Já Existem.");
+                alert("Erro! \nNome de Usuário e E-mail Já Existem.");
             } else if ($('#usuarioResult').is(':visible')) {
-                alert("Erro! Nome de Usuário Já Existe.");
+                alert("Erro! \nNome de Usuário Já Existe.");
             } else if ($('#emailResult').is(':visible')) {
-                alert("Erro! E-Mail Já Existe.");
+                alert("Erro! \nE-Mail Já Existe.");
             } else {
                 $.ajax({
                     type: "POST",
@@ -39,11 +41,11 @@ function validarForm() {
 }
 
 $('#emailR').focusout(function () {
-   var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-   var email = $("#emailR").val();
-   if (!filter.test(email) && email !== '') {
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    var email = $("#emailR").val();
+    if (!filter.test(email) && email !== '') {
         $('#emailR').addClass('alert-danger');
-        $('#emailInvalid').show().fadeOut(4000);
+        $('#emailInvalid').show();
     } else {
         if ($('#emailR').hasClass('alert-danger')) {
             $('#emailR').removeClass('alert-danger');

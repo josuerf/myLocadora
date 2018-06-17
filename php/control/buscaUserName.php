@@ -14,3 +14,4 @@ if ($resultado) {
 } else {
     echo '0';
 }
+?>
